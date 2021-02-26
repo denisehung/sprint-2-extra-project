@@ -1,0 +1,131 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.form {
+  background-color: lightblue;
+  font-family: "Raleway", sans-serif;
+  width: 600px;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 0 auto;
+}
+
+.fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form__item {
+  font-family: "Raleway", sans-serif;
+  padding: 10px;
+  font-size: 20px;
+  color: black;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: none;
+}
+
+.form__item_type_text {
+  margin-bottom: 40px;
+  height: 50px;
+}
+
+.form__item_type_textarea {
+  height: 200px;
+  width: 100%;
+  resize: none;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.form__input-container {
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.form__floating-label {
+  font-size: 20px;
+  color: grey;
+  position: absolute;
+  pointer-events: none;
+  top: 13px;
+  left: 12px;
+  transition: all 0.2s ease;
+}
+
+.form__item:focus {
+  outline-color: rgb(247, 188, 144);
+}
+
+.description:focus {
+  outline-color: rgb(247, 188, 144);
+}
+
+/* puts label on top of input field when focused
+and keeps it on top when there is any valid input */
+.form__item:focus ~ .form__floating-label,
+.form__item:not(:focus):valid ~ .form__floating-label {
+  top: -25px;
+  bottom: 0px;
+  left: 0px;
+  font-size: 15px;
+  opacity: 1;
+  color: #404040;
+}
+
+.radio-button-container {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.radio__star {
+  visibility: hidden; /* hides original radio button */
+  font-size: 18px;
+  margin-right: 12px;
+  cursor: pointer;
+  margin-top: -3px;
+  vertical-align: top;
+}
+
+.radio__star:before {
+  content: "\2606";
+  position: absolute;
+  visibility: visible;
+}
+
+.radio__star:checked:before {
+  content: "\2605";
+  position: absolute;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+
+.form__button {
+  font-family: "Raleway", sans-serif;
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: tomato;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  transition: box-shadow 0.4s ease;
+}
+
+.form__button:hover {
+  box-shadow: 2px 2px 13px -5px rgba(0, 0, 0, 0.67);
+}

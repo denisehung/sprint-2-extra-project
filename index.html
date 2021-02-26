@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form class="form">
+        <fieldset class="fieldset">
+            <div class="form__input-container">
+                <input type="text" class="form__item form__item_type_text" id="name" autocomplete="off" required>
+                <label class="form__floating-label">Name</label>
+            </div>
+            <div class="form__input-container">
+                <input type="text" class="form__item form__item_type_text" id="surname" autocomplete="off" required>
+                <label class="form__floating-label">Surname</label>
+            </div>
+            <div class="form__input-container">
+                <textarea class="form__item form__item_type_textarea" id="description" name="description"
+                    autocomplete="off" required></textarea>
+                <span class="form__floating-label">Description</span>
+            </div>
+        </fieldset>
+        <fieldset class="fieldset">
+            <div class="radio-button-container">
+                <input type="radio" name="delivery" class="radio__star" id="with-delivery" checked>
+                <label for="with-delivery" class="radio__label">With delivery</label>
+            </div>
+
+            <div class="radio-button-container">
+                <input type="radio" name="delivery" class="radio__star" id="without-delivery">
+                <label for="without-delivery" class="radio__label">Without delivery</label>
+            </div>
+        </fieldset>
+        <div class="button-container">
+            <input type="submit" class="form__button"></input>
+        </div>
+    </form>
+</body>
+
+</html>
